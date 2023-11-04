@@ -17,7 +17,7 @@ public partial class SampleController : Node
     private void InitCommands()
     {
         controller.EnqueueCommand(new Linear3<(float a, float b, float c)>(new Vector3(1, 0, 0.2f), 0.25f));
-        controller.EnqueueCommand(new Linear3<(float a, float b, float c)>(new Vector3(1, 1, 00.2f), 0.5f));
+        controller.EnqueueCommand(new Linear3<(float a, float b, float c)>(new Vector3(1, 1, 0.2f), 0.5f));
         controller.EnqueueCommand(new Linear3<(float a, float b, float c)>(new Vector3(1, 1, 1), 0.75f));
         controller.EnqueueCommand(new Linear3<(float a, float b, float c)>(new Vector3(1, 0, 1), 1.0f));
 

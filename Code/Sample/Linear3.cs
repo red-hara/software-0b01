@@ -5,7 +5,7 @@ public class Linear3<Gen> : ICommand<IMechanism<Gen, Vector3>>
     where Gen : struct
 {
     private Vector3 start;
-    private Vector3 target;
+    private readonly Vector3 target;
     private readonly float velocity;
     private float progress;
 
@@ -27,7 +27,7 @@ public class Linear3<Gen> : ICommand<IMechanism<Gen, Vector3>>
     public Progress Step(Controller<IMechanism<Gen, Vector3>> controller, float delta)
     {
         var deltaVector = target - start;
-        float length = deltaVector.Length();
+        var length = deltaVector.Length();
         if (length <= 0)
         {
             return Progress.Done;
