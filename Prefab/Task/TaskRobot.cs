@@ -106,6 +106,6 @@ public partial class TaskRobot : Node3D, IMechanism<(float a, float b, float c, 
 
     public (float a, float b, float c, float d) DriveSpeed()
     {
-        return (130, 130, 130, 30);
+        return (130, 130, 130, 300);
     }
 }
